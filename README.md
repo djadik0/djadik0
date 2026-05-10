@@ -27,7 +27,7 @@
 - SystemVerilog
 - Verilog
 - Tcl
-- Python
+- Python для базовой связи с FPGA-платой
 
 **Инструменты:**
 - Xilinx Vivado
@@ -43,7 +43,9 @@
 - pipeline
 - top-level integration
 - memory-mapped peripherals
+- APB peripheral design
 - register map design
+- CRC / checksum hardware blocks
 - BRAM / LUTRAM
 - FIFO
 - DSP-блоки и systolic array concepts
@@ -53,11 +55,12 @@
 **Интерфейсы и протоколы:**
 - UART RX/TX
 - SPI Master
+- APB
 - AXI4-Lite
 - AXI-Stream
 - valid-ready handshake
-- valid-credit 
-- AMBA concepts 
+- valid-credit flow control
+- AMBA concepts
 
 **Архитектурные темы:**
 - RISC-V RV32I basics
@@ -77,7 +80,7 @@
 ## Навыки, продемонстрированные в проектах
 
 - **SoC / top-level integration:** сборка целостных систем из нескольких RTL-блоков, подключение памяти, периферии, контроллеров и интерфейсных модулей.
-- **Memory-mapped периферия:** разработка регистровых блоков, register map, чтение/запись по адресам, частичная запись через byte strobe.
+- **Memory-mapped периферия:** разработка регистровых блоков, register map, APB/AXI4-Lite read/write транзакции, чтение/запись по адресам, частичная запись через byte strobe.
 - **Интерфейсные IP-блоки:** UART RX/TX, SPI Master, AXI4-Lite slave, AXI-Stream width converter, valid-ready pipeline stage.
 - **FPGA-прототипирование:** подготовка XDC constraints, работа с платой, RGB LED, 7-segment display, UART-связь с ПК.
 - **Потоковая обработка данных:** AXI-Stream, backpressure, FIFO, width conversion, valid/ready handshake.
@@ -150,7 +153,9 @@
 - DSP-ячейки;
 - LUTRAM и BRAM;
 - pipelines и systolic arrays;
-- valid-ready, AXI-Stream и credit flow control.
+- valid-ready, AXI-Stream и credit flow control;
+- crossing clock domains;
+- системная шина APB и аппаратный вычислитель CRC.
 
 
 ### 5. RTL / FPGA Practice
